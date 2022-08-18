@@ -21,5 +21,6 @@ def prep_DOW(df):
     df['low'] = df.low.astype('float64')
     df['close'] = df.close.astype('float64')
     df['quarter'] = df.quarter.astype('int')
+    df = df.backfill()
 
     return df
